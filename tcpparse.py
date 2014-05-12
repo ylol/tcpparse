@@ -72,7 +72,7 @@ def main(argv=sys.argv):
       # print 'TS : ' , ts
       #print 'frame : ' , packet_count
   
-     # si le packet est fragemente, la payload n a pas de flag 
+     # No flags on fragmented packets
       try:
         syn_flag = ( tcp.flags & dpkt.tcp.TH_SYN ) != 0
         ack_flag = ( tcp.flags & dpkt.tcp.TH_ACK ) != 0
